@@ -1,215 +1,89 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="estilos.css">
-    <title> PurpleTEES </title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="estilos.css" />
+    <title>PurpleTEES</title>
+  </head>
 
-<body>
-
+  <body>
     <header>
-        <div id="monograma">Purple 
-          <br>  
-          Tees</div>
-        <nav>
-          <ul >
-              <li ><a class="enlaceHeader" href="htmls/contacto.html" > Mi cuenta </a> </li>
-              <li ><a class="enlaceHeader" href="htmls/Sobremi.html" > Mi carrito  </a> </li>
-              <li ><a class="enlaceHeader" href="htmls/Sobremi.html" > Ayuda  </a> </li>
-          </ul>
-        </nav>
-      
-      </header>
+      <div id="monograma">
+        Purple
+        <br />
+        Tees
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a class="enlaceHeader" href="htmls/contacto.html"> Mi cuenta </a>
+          </li>
+          <li>
+            <button class="enlaceHeader" type="button" onclick="abrirCarrito()">
+              Mi carrito
+            </button>
+          </li>
+          <li><a class="enlaceHeader" href="htmls/Sobremi.html"> Ayuda </a></li>
+        </ul>
+      </nav>
+    </header>
 
-      <section>
-          <div class="contenedorGrilla">Remera 1
-              <div class="contenedorRemera img1" ></div>
-                <div class="contenedorDatos">
-                    <button type="button" class="btnCrear">Comprar</button >
-                    <input type="text" placeholder="Unidades" class="unidades">
-                    <input type="text" placeholder="Talle" class="talle">
-                </div> 
-              </div>
-          <div class="contenedorGrilla">Remera 2 
-            <div class="contenedorRemera img2"></div>
-            <div class="contenedorDatos">
-              <button type="button" class="btnCrear">Comprar</button >
-              <input type="text" placeholder="Unidades" class="unidades">
-              <input type="text" placeholder="Talle" class="talle">
-          </div> 
+    <section id="catalogo-remeras"></section>
+
+    <div id="carrito">
+      <div class="boton-cerrar d-flex justify-content-end">
+        <button type="button" class="btn btn-light" onclick="cerrarCarrito()">
+          Cerrar carrito
+        </button>
+      </div>
+      <div class="title-container">
+        <h2 class="ml-4">Carrito</h2>
+      </div>
+      <div
+        id="productos-carrito"
+        class="productos-carrito d-flex flex-column align-items-center"
+      ></div>
+      <div
+        class="comprar-carrito d-flex justify-content-between align-items-center"
+      >
+        <h6 id="total-carrito" class="ml-4"></h6>
+        <div>
+          <button type="button" class="btn btn-light" onclick="vaciarCarrito()">
+            Vaciar
+          </button>
+          <button type="button" class="btnCrear mr-4" onclick="comprar()">
+            Comprar
+          </button>
         </div>
-          <div class="contenedorGrilla">Remera 3 
-            <div class="contenedorRemera img3"></div>
-            <div class="contenedorDatos">
-              <button type="button" class="btnCrear">Comprar</button >
-              <input type="text" placeholder="Unidades" class="unidades">
-              <input type="text" placeholder="Talle" class="talle">
-          </div> </div>
-          <div class="contenedorGrilla">Remera 4
-            <div class="contenedorRemera img4"></div>
-            <div class="contenedorDatos">
-              <button type="button" class="btnCrear">Comprar</button >
-              <input type="text" placeholder="Unidades" class="unidades">
-              <input type="text" placeholder="Talle" class="talle">
-          </div> 
-        </div>
-          <div class="contenedorGrilla">Remera 5 
-            <div class="contenedorRemera img5"></div>
-            <div class="contenedorDatos">
-              <button type="button" class="btnCrear">Comprar</button >
-              <input type="text" placeholder="Unidades" class="unidades">
-              <input type="text" placeholder="Talle" class="talle">
-          </div> </div>
-          <div class="contenedorGrilla">Remera 6 
-            <div class="contenedorRemera img6"></div>
-            <div class="contenedorDatos">
-              <button type="button" class="btnCrear">Comprar</button >
-              <input type="text" placeholder="Unidades" class="unidades">
-              <input type="text" placeholder="Talle" class="talle">
-          </div> </div>
-          <div class="contenedorGrilla">Remera 7 
-            <div class="contenedorRemera img7"></div>
-            <div class="contenedorDatos">
-              <button type="button" class="btnCrear">Comprar</button >
-              <input type="text" placeholder="Unidades" class="unidades">
-              <input type="text" placeholder="Talle" class="talle">
-          </div> </div>
-          <div class="contenedorGrilla" >Remera 8 
-            <div class="contenedorRemera img8"></div>
-            <div class="contenedorDatos">
-              <button type="button" class="btnCrear">Comprar</button >
-              <input type="text" placeholder="Unidades" class="unidades">
-              <input type="text" placeholder="Talle" class="talle">
-          </div> </div>
-          <div class="contenedorGrilla">Remera 9 
-            <div class="contenedorRemera img9"></div>
-            <div class="contenedorDatos">
-              <button type="button" class="btnCrear">Comprar</button >
-              <input type="text" placeholder="Unidades" class="unidades">
-              <input type="text" placeholder="Talle" class="talle">
-          </div> </div>
-          <div class="contenedorGrilla">Remera 10 
-            <div class="contenedorRemera img10"></div>
-            <div class="contenedorDatos">
-              <button type="button" class="btnCrear">Comprar</button >
-              <input type="text" placeholder="Unidades" class="unidades">
-              <input type="text" placeholder="Talle" class="talle">
-          </div> </div>
-          <div class="contenedorGrilla">Remera 11
-            <div class="contenedorRemera img11"></div>
-            <div class="contenedorDatos">
-              <button type="button" class="btnCrear">Comprar</button >
-              <input type="text" placeholder="Unidades" class="unidades">
-              <input type="text" placeholder="Talle" class="talle">
-          </div> </div>
-          <div class="contenedorGrilla">Remera 12
-            <div class="contenedorRemera img12"></div>
-            <div class="contenedorDatos">
-              <button type="button" class="btnCrear">Comprar</button >
-              <input type="text" placeholder="Unidades" class="unidades">
-              <input type="text" placeholder="Talle" class="talle">
-          </div> </div>
-          <div class="contenedorGrilla">Remera 13
-            <div class="contenedorRemera img13"></div>
-            <div class="contenedorDatos">
-              <button type="button" class="btnCrear">Comprar</button >
-              <input type="text" placeholder="Unidades" class="unidades">
-              <input type="text" placeholder="Talle" class="talle">
-          </div> </div>
-          <div class="contenedorGrilla">Remera 14
-            <div class="contenedorRemera img14"></div>
-            <div class="contenedorDatos">
-              <button type="button" class="btnCrear">Comprar</button >
-              <input type="text" placeholder="Unidades" class="unidades">
-              <input type="text" placeholder="Talle" class="talle">
-          </div> </div>
-          <div class="contenedorGrilla">Remera 15
-            <div class="contenedorRemera img15"></div>
-            <div class="contenedorDatos">
-              <button type="button" class="btnCrear">Comprar</button >
-              <input type="text" placeholder="Unidades" class="unidades">
-              <input type="text" placeholder="Talle" class="talle">
-          </div>  </div>
-          <div class="contenedorGrilla">Remera 16
-            <div class="contenedorRemera img16"></div>
-            <div class="contenedorDatos">
-              <button type="button" class="btnCrear">Comprar</button >
-              <input type="text" placeholder="Unidades" class="unidades">
-              <input type="text" placeholder="Talle" class="talle">
-          </div> </div>
-          <div class="contenedorGrilla">Remera 17
-            <div class="contenedorRemera img17"></div>
-            <div class="contenedorDatos">
-              <button type="button" class="btnCrear">Comprar</button >
-              <input type="text" placeholder="Unidades" class="unidades">
-              <input type="text" placeholder="Talle" class="talle">
-          </div> </div>
-          <div class="contenedorGrilla">Remera 18
-            <div class="contenedorRemera img18"></div>
-            <div class="contenedorDatos">
-              <button type="button" class="btnCrear">Comprar</button >
-              <input type="text" placeholder="Unidades" class="unidades">
-              <input type="text" placeholder="Talle" class="talle">
-          </div> </div>
-          <div class="contenedorGrilla">Remera 19
-            <div class="contenedorRemera img19"></div>
-            <div class="contenedorDatos">
-              <button type="button" class="btnCrear">Comprar</button >
-              <input type="text" placeholder="Unidades" class="unidades">
-              <input type="text" placeholder="Talle" class="talle">
-          </div> </div>
-          <div class="contenedorGrilla">Remera 20
-            <div class="contenedorRemera img20"></div>
-            <div class="contenedorDatos">
-              <button type="button" class="btnCrear">Comprar</button >
-              <input type="text" placeholder="Unidades" class="unidades">
-              <input type="text" placeholder="Talle" class="talle">
-          </div> </div>
-          <div class="contenedorGrilla">Remera 21
-            <div class="contenedorRemera img21"></div>
-            <div class="contenedorDatos">
-              <button type="button" class="btnCrear">Comprar</button >
-              <input type="text" placeholder="Unidades" class="unidades">
-              <input type="text" placeholder="Talle" class="talle">
-          </div> </div>
-          <div class="contenedorGrilla">Remera 22
-            <div class="contenedorRemera img22"></div>
-            <div class="contenedorDatos">
-              <button type="button" class="btnCrear">Comprar</button >
-              <input type="text" placeholder="Unidades" class="unidades">
-              <input type="text" placeholder="Talle" class="talle">
-          </div> </div>
-          <div class="contenedorGrilla">Remera 23
-            <div class="contenedorRemera img23"></div>
-            <div class="contenedorDatos">
-              <button type="button" class="btnCrear">Comprar</button >
-              <input type="text" placeholder="Unidades" class="unidades">
-              <input type="text" placeholder="Talle" class="talle">
-          </div> </div>
-          <div class="contenedorGrilla">Remera 24
-            <div class="contenedorRemera img24"></div>
-            <div class="contenedorDatos">
-              <button type="button" class="btnCrear">Comprar</button >
-              <input type="text" placeholder="Unidades" class="unidades">
-              <input type="text" placeholder="Talle" class="talle">
-          </div> </div>
-         
-        
+      </div>
+    </div>
 
-      </section>
+    <footer class="footer"></footer>
 
-
-<footer class="footer">
-
-</footer>
-
-  <script src="app.js"></script>
-  <script src="eventos_dom_json.js"></script>
-</body>
+    <script src="app.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
